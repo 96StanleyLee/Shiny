@@ -6,8 +6,10 @@ const HomePage = () => {
       <div className="section">
         <div className="container intro">
           <h1>A network built to help ideas glow up</h1>
-          <p>Shiny ✨’s goal is to gather the brightest ideas and minds together.
-Find and collaborate with the right people.</p>
+          <p className="intro_subtitle">
+            Shiny ✨’s goal is to gather the brightest ideas and minds together.
+            Find and collaborate with the right people.
+          </p>
         </div>
       </div>
       <div className="section">

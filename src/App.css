@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #101127;
   color: white;
 }
@@ -16,12 +16,12 @@ body {
   margin: 0 auto;
 }
 
-.navbar{
-height: 60px;
-padding: 32px;
-display: flex;
-align-items: center;
-justify-content: center;
+.navbar {
+  height: 60px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav_container {
@@ -44,7 +44,7 @@ justify-content: center;
 }
 
 .nav_logo_sub {
-  color: #A4A7C6;
+  color: #a4a7c6;
   font-weight: light;
   padding-left: 16px;
   opacity: 0.6;
@@ -56,10 +56,11 @@ justify-content: center;
   width: 30%;
 }
 
-.nav_right, a {
+.nav_right,
+a {
   padding: 0px 16px;
   text-decoration: none;
-  color: #A099A9;
+  color: #a099a9;
   font-size: 1rem;
   transition: 0.2s;
 }
@@ -70,4 +71,8 @@ justify-content: center;
 
 .intro {
   text-align: center;
+}
+
+.intro_subtitle {
+  opacity: 0.6;
 }
