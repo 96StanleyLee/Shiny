@@ -1,5 +1,6 @@
 import React from "react";
 import ShinyCard from "./ShinyCard.js";
+import LinesBG from "./Lines.svg";
 
 const HomePage = () => {
   return (
@@ -25,6 +26,12 @@ const HomePage = () => {
               <ShinyCard />
             </div>
           </div>
+          <div className="center">
+            <a href="#" className="big-btn">
+              View more
+              <div className="big-btn-bg"></div>
+            </a>
+          </div>
         </div>
       </div>
       <div className="section">
@@ -36,6 +43,9 @@ const HomePage = () => {
         <div className="container">
           <h1>How Shiny works</h1>
         </div>
+      </div>
+      <div className="homepage-bg">
+        <img src={LinesBG} />
       </div>
     </div>
   );
