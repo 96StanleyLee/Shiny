@@ -6,9 +6,15 @@
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Chivo", sans-serif;
   background-color: #101127;
   color: white;
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 
 .container {
@@ -69,10 +75,79 @@ a {
   color: white;
 }
 
-.intro {
+.Intro {
   text-align: center;
+  padding: 10rem 0px;
 }
 
 .intro_subtitle {
-  opacity: 0.6;
+  opacity: 0.65;
+  line-height: 150%;
+}
+
+.card {
+  border-radius: 5px;
+  padding: 32px 24px;
+
+  background: linear-gradient(
+    136.22deg,
+    rgba(48, 31, 75, 0.6) -17.64%,
+    rgba(0, 255, 209, 0.6) 179.58%
+  );
+  border: 0.5px solid rgba(204, 252, 255, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.grid2-container {
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: auto auto;
+}
+
+.grid4-container {
+  display: grid;
+  column-gap: 24px;
+  grid-template-columns: auto auto auto auto;
+}
+
+.grid8-container {
+  display: grid;
+  column-gap: 8px;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.card_row_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.card_row_team {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 32px;
+  align-items: start;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.card_row_team p {
+  opacity: 0.7;
+}
+
+.card_team_leader {
+  grid-column-start: 1;
+}
+
+.card_team_panel {
+  grid-column-start: 2;
+}
+
+.profile-circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100px;
+  border: 1px solid rgba(11, 58, 79, 0.5);
+  background-color: rgb(19, 43, 88);
 }
