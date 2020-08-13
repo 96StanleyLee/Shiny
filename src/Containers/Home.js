@@ -9,7 +9,7 @@ const HomePage = () => {
         <div className="container">
           <h1>A network built to help ideas glow up</h1>
           <p className="intro_subtitle">
-            Shiny ✨’s goal is to gather the brightest ideas and minds together.{" "}
+            Shiny <span role="img" aria-label="Shiny">✨</span>’s goal is to gather the brightest ideas and minds together.{" "}
             <br />
             We help build the foundation to your next project.
           </p>
@@ -27,10 +27,10 @@ const HomePage = () => {
             </div>
           </div>
           <div className="center">
-            <a href="#" className="big-btn">
+            <span className="big-btn">
               View more
               <div className="big-btn-bg"></div>
-            </a>
+            </span>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="homepage-bg">
-        <img src={LinesBG} />
+        <img src={LinesBG} alt='Lines Background' />
       </div>
     </div>
   );

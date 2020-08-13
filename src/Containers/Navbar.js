@@ -5,30 +5,30 @@ const Navbar = () => {
     <div className="navbar">
       <div className="nav_container">
         <div className="nav_left">
-          <a className="nav_logo">
+          <span className="nav_logo">
             Shiny{" "}
             <span role="img" aria-label="shiny">
               ✨
             </span>
-          </a>
+          </span>
           <div className="nav_logo_sub">
             Discover unique ideas for your projects
           </div>
         </div>
         <div className="nav_right">
           <div className="nav_menu">
-            <a href="#" className="nav_link">
+            <span className="nav_link">
               Submit{" "}
-            </a>
-            <a href="#" className="nav_link">
+            </span>
+            <span className="nav_link">
               Browse
-            </a>
-            <a href="#" className="nav_link">
+            </span>
+            <span className="nav_link">
               Opportunities
-            </a>
-            <a href="#" className="nav_link_collaborate">
+            </span>
+            <span className="nav_link_collaborate">
               Collaborate
-            </a>
+            </span>
           </div>
         </div>
       </div>
