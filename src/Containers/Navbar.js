@@ -20,7 +20,7 @@ const Navbar = () => {
             <span className="nav_link">
               Submit{" "}
             </span>
-            <span className="nav_link">
+            <span className="nav_link" onClick={()=>console.log('hi')}>
               Browse
             </span>
             <span className="nav_link">

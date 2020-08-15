@@ -1,7 +1,11 @@
 import React from "react";
 
-const ShinyCard = () => {
+const ShinyCard = (props) => {
+  
+  let {image, lead} = props.data
+  
   return (
+  <div className="grid-item">
     <div className="card">
       <div className="card_row_title">
         <h2>Shiny Platform</h2>
@@ -13,9 +17,10 @@ const ShinyCard = () => {
           <p>Idea submitted by</p>
           <div className="profile-circle">
             <img
-              src="{project-leader-img}"
+              className="profile-image"
+              src={image}
               width="40"
-              alt="{project-leader-name}"
+              alt={lead}
             ></img>
           </div>
         </div>
@@ -23,15 +28,17 @@ const ShinyCard = () => {
           <p>Contributors</p>
           <div className="profile-circle">
             <img
-              src="{project-leader-img}"
+              className="profile-image"
+              src={image}
               width="40"
-              alt="{project-leader-name}"
+              alt={lead}
             ></img>
           </div>
         </div>
       </div>
       <p className="">Currently looking to fill positions...</p>
     </div>
+  </div>
   );
 };
 

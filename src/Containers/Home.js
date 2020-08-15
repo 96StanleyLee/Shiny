@@ -1,8 +1,8 @@
 import React from "react";
-import ShinyCard from "./ShinyCard.js";
+import ShinyCard from "../Components/ShinyCard.js";
 import LinesBG from "./Lines.svg";
 
-const HomePage = () => {
+const HomePage = ({homecards}) => {
   return (
     <div className="homepage">
       <div className="section Intro">
@@ -19,12 +19,9 @@ const HomePage = () => {
         <div className="container">
           <h1>Shiny Ideas</h1>
           <div className="mb4 grid2-container">
-            <div className="grid-item">
-              <ShinyCard />
-            </div>
-            <div className="grid-item">
-              <ShinyCard />
-            </div>
+            {homecards.map(cards =>{
+              return <ShinyCard key={cards.id} data={cards}/>
+            })}
           </div>
           <div className="center">
             <span className="big-btn">

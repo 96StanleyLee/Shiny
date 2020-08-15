@@ -71,8 +71,9 @@ span {
   transition: 0.2s;
 }
 
-.nav_link:hover {
+.nav_link:hover, .nav_link_collaborate:hover {
   color: white;
+  cursor: pointer;
 }
 
 .Intro {
@@ -151,6 +152,15 @@ span {
   border-radius: 100px;
   border: 1px solid rgba(11, 58, 79, 0.5);
   background-color: rgb(19, 43, 88);
+}
+
+.profile-image {
+  width: 4em;
+  height: 4em;
+  border-radius: 100px;
+  margin-left: 11%;
+  margin-top: 10%;
+
 }
 
 .footer {
