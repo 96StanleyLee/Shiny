@@ -2,25 +2,29 @@ import React from "react";
 import ShinyCard from "../Components/ShinyCard.js";
 import LinesBG from "./Lines.svg";
 
-const HomePage = ({homecards}) => {
+const HomePage = ({ homecards }) => {
   return (
     <div className="homepage">
       <div className="section Intro">
         <div className="container">
           <h1>A network built to help ideas glow up</h1>
-          <p className="intro_subtitle">
-            Shiny <span role="img" aria-label="Shiny">✨</span>’s goal is to gather the brightest ideas and minds together.{" "}
-            <br />
+          <p className="intro_subtitle mb4">
+            Shiny{" "}
+            <span role="img" aria-label="Shiny">
+              ✨
+            </span>
+            ’s goal is to gather the brightest ideas and minds together. <br />
             We help build the foundation to your next project.
           </p>
+          <span className="btn">Register</span>
         </div>
       </div>
       <div className="section">
         <div className="container">
           <h1>Shiny Ideas</h1>
           <div className="mb4 grid2-container">
-            {homecards.map(cards =>{
-              return <ShinyCard key={cards.id} data={cards}/>
+            {homecards.map((cards) => {
+              return <ShinyCard key={cards.id} data={cards} />;
             })}
           </div>
           <div className="center">
@@ -42,7 +46,7 @@ const HomePage = ({homecards}) => {
         </div>
       </div>
       <div className="homepage-bg">
-        <img src={LinesBG} alt='Lines Background' />
+        <img src={LinesBG} alt="Lines Background" />
       </div>
     </div>
   );
