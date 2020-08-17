@@ -18,6 +18,7 @@ const Register = () => {
           id="email"
           required
         />
+        <br></br>
 
         <label for="psw">
           <b>Password</b>
@@ -29,6 +30,7 @@ const Register = () => {
           id="psw"
           required
         />
+        <br></br>
 
         <label for="psw-repeat">
           <b>Repeat Password</b>
@@ -40,6 +42,7 @@ const Register = () => {
           id="psw-repeat"
           required
         />
+        <br></br>
 
         <p>
           By creating an account you agree to our{" "}

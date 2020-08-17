@@ -28,15 +28,18 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Register />
             <HomePage homecards={homepageCards} />
-            <Footer />
+          </Route>
+          <Route exact path = "/register">
+            <Register />
           </Route>
           <Route path="*">
             <PageNotFound />
           </Route>
         </Switch>
       </Router>
+      <Footer />
+
     </div>
   );
 }
