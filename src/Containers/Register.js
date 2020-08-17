@@ -2,13 +2,15 @@ import React, {useState} from "react";
 import axios from 'axios';
 
 
-const Register = () => {
+const Register = ({register}) => {
 
   let [firstName, setFirstName] = useState('')
   let [lastName, setLastName] = useState('')
   let [email, setEmail] = useState('')
   let [password, setPassword] = useState('')
   let [passwordRepeat, setPasswordRepeat] = useState('')
+
+  
 
   
 
@@ -97,7 +99,7 @@ const Register = () => {
           By creating an account you agree to our{" "}
           <a href="#">Terms &amp; Privacy</a>.
         </p>
-        <button type="submit" class="registerbtn">
+        <button type="submit" class="registerbtn" onClick={()=>register({firstName, lastName, email, password, passwordRepeat})}>
           Register
         </button>
       </div>
