@@ -4,29 +4,24 @@ import LinesBG from "./Lines.svg";
 import { Link } from "react-router-dom";
 
 const HomePage = ({ homecards }) => {
-  const style = {
-    textDecoration: "none",
-  };
   return (
     <div className="homepage">
       <div className="section Intro">
         <div className="container">
           <h1>A network built to help ideas glow up</h1>
           <p className="intro_subtitle mb4">
-            Shiny{" "}
+            Shiny
             <span role="img" aria-label="Shiny">
               ✨
             </span>
             ’s goal is to gather the brightest ideas and minds together. <br />
             We help build the foundation to your next project.
           </p>
-          <Link style={style} to="/register">
-            {" "}
-            <span className="btn mr3">Register</span>{" "}
+          <Link className="btn mr3" to="/register">
+            <span>Register</span>
           </Link>
-          <Link style={style} to="/register">
-            {" "}
-            <span className="btn">Login</span>{" "}
+          <Link to="/login" className="btn">
+            <span>Login</span>
           </Link>
         </div>
       </div>
