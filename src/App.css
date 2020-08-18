@@ -117,7 +117,7 @@ span {
 .card-view-btn {
   margin-top: -3rem;
   padding: 0;
-  background: rgba(43, 16, 78, 0.8);
+  background: #110521;
   width: 8rem;
   height: 8rem;
   cursor: pointer;
@@ -132,6 +132,31 @@ span {
 
 .card-view-btn p {
   margin: 12px 0px 0px 0px !important;
+}
+
+.card-view-btn:hover {
+  background: rgba(43, 16, 78);
+}
+
+.card-view-btn-text {
+  display: absolute;
+  opacity: 0;
+  margin-top: -2rem;
+  transition: 0.2s;
+}
+
+.card-view-btn:hover > .card-view-btn-text {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.card-view-btn-icon {
+  margin-top: 32px;
+  transition: 0.2s ease;
+}
+
+.card-view-btn:hover > .card-view-btn-icon {
+  margin-top: 0;
 }
 
 .card-overlay {

@@ -1,5 +1,8 @@
 import React from "react";
 import ViewIcon from "../img/Icon_View.svg";
+import GotoIcon from "../img/Icon_Goto.svg";
+import WatchIcon from "../img/Icon_Watch.svg";
+import CategoryNetwork from "../img/Category_Network.svg";
 
 const ShinyCard = (props) => {
   let { image, lead } = props.data;
@@ -8,14 +11,37 @@ const ShinyCard = (props) => {
     <div className="grid-item">
       <div className="card">
         <div className="card-overlay">
-          <span className="card-view-btn">
-            <img src={ViewIcon} alt="View" width="40" />
-            <p>View</p>
+          <span className="card-view-btn mx1">
+            <img
+              src={ViewIcon}
+              alt="View"
+              width="40"
+              className="card-view-btn-icon"
+            />
+            <p className="card-view-btn-text">View</p>
+          </span>
+          <span className="card-view-btn mx1">
+            <img
+              src={GotoIcon}
+              alt="View"
+              width="40"
+              className="card-view-btn-icon"
+            />
+            <p className="card-view-btn-text">Visit</p>
+          </span>
+          <span className="card-view-btn mx1">
+            <img
+              src={WatchIcon}
+              alt="View"
+              width="40"
+              className="card-view-btn-icon"
+            />
+            <p className="card-view-btn-text">Watch</p>
           </span>
         </div>
         <div className="card_row_title">
           <h2>Shiny Platform</h2>
-          <img src="#" width="24" alt="category-name"></img>
+          <img src={CategoryNetwork} width="24" alt="category-name"></img>
         </div>
         <p>Discover the most unique ideas for your projects</p>
         <div className="mb3 card_row_team">
