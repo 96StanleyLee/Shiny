@@ -218,3 +218,10 @@ span {
   top: 0;
   z-index: -2;
 }
+
+.register input {
+  margin-top: 12px;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
