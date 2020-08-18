@@ -1,4 +1,5 @@
 import React from "react";
+import ViewIcon from "../img/Icon_View.svg";
 
 const ShinyCard = (props) => {
   let { image, lead } = props.data;
@@ -6,6 +7,12 @@ const ShinyCard = (props) => {
   return (
     <div className="grid-item">
       <div className="card">
+        <div className="card-overlay">
+          <span className="card-view-btn">
+            <img src={ViewIcon} alt="View" width="40" />
+            <p>View</p>
+          </span>
+        </div>
         <div className="card_row_title">
           <h2>Shiny Platform</h2>
           <img src="#" width="24" alt="category-name"></img>
