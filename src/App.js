@@ -3,7 +3,7 @@ import Navbar from "./Containers/Navbar.js";
 import Footer from "./Containers/Footer.js";
 import "./App.css";
 import HomePage from "./Containers/Home";
-import Register from "./Containers/Register";
+import SignIn from "./Containers/Register_Login";
 import PageNotFound from "./Containers/404";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Axios from "axios";
@@ -33,15 +33,18 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
       <Router>
+      <Navbar />
         <Switch>
           <Route exact path="/">
             <HomePage homecards={homepageCards} />
           </Route>
-          <Route exact path = "/register">
+          {/* <Route exact path = "/register">
             <Register register={onClickRegister}/>
-          </Route>
+          </Route> */}
+          <Route path="/register" render={(routeProps) => <SignIn {...routeProps} register={onClickRegister}/>} />
+          <Route path="/login" render={(routeProps) => <SignIn {...routeProps} />} />
+
           <Route path="*">
             <PageNotFound />
           </Route>

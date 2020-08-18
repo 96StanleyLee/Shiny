@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Register = ({ register }) => {
+const Register = (props,{ register }) => {
   let [firstName, setFirstName] = useState("");
   let [lastName, setLastName] = useState("");
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let [passwordRepeat, setPasswordRepeat] = useState("");
 
+  console.log(props)
   return (
     <div className="section register">
       <div className="container">
+        {props.match.path === '/register'? 
+        <>
         <h1>Register</h1>
         <p>Please fill in this form to create an account.</p>
-        <label for="email">
+        </>
+        :
+        <> 
+        <h1>Login</h1>
+        <p>Please fill in this form to login.</p></>}
+        
+
+        <label htmlFor="email">
           <b>Email</b>
         </label>{" "}
         <br />
@@ -28,7 +38,7 @@ const Register = ({ register }) => {
           required
         />
         <br></br>
-        <label for="psw">
+        <label htmlFor="psw">
           <b>Password</b>
         </label>
         <br />
@@ -43,7 +53,7 @@ const Register = ({ register }) => {
           required
         />
         <br></br>
-        <label for="psw-repeat">
+        <label htmlFor="psw-repeat">
           <b>Repeat Password</b>
         </label>
         <br />
@@ -64,7 +74,7 @@ const Register = ({ register }) => {
         </p>
         <button
           type="submit"
-          class="registerbtn"
+          className="registerbtn"
           onClick={() =>
             register({ firstName, lastName, email, password, passwordRepeat })
           }
@@ -73,7 +83,7 @@ const Register = ({ register }) => {
         </button>
       </div>
 
-      <div class="container signin">
+      <div className="container signin">
         <p>
           Already have an account? <a href="#">Sign in</a>.
         </p>

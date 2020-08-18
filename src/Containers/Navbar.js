@@ -1,16 +1,23 @@
 import React from "react";
+import {Link, Router} from "react-router-dom"
+
 
 const Navbar = () => {
+  const style = {
+    textDecoration: 'none'
+  }
   return (
     <div className="navbar">
       <div className="nav_container">
         <div className="nav_left">
-          <span className="nav_logo">
-            Shiny{" "}
-            <span role="img" aria-label="shiny">
-              ✨
+          <Link to="/" style={style}>
+            <span className="nav_logo">
+              Shiny{" "}
+              <span role="img" aria-label="shiny">
+                ✨
+              </span>
             </span>
-          </span>
+          </Link>
           <div className="nav_logo_sub">
             Discover unique ideas for your projects
           </div>
