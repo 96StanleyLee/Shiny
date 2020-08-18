@@ -1,12 +1,12 @@
 import React from "react";
 import ShinyCard from "../Components/ShinyCard.js";
 import LinesBG from "./Lines.svg";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const HomePage = ({ homecards }) => {
   const style = {
-    textDecoration: 'none'
-  }
+    textDecoration: "none",
+  };
   return (
     <div className="homepage">
       <div className="section Intro">
@@ -20,9 +20,14 @@ const HomePage = ({ homecards }) => {
             ’s goal is to gather the brightest ideas and minds together. <br />
             We help build the foundation to your next project.
           </p>
-         <Link style={style} to="/register"> <span className="btn">Register</span> </Link>
-         <Link style={style} to="/register"> <span className="btn">Login&nbsp;&nbsp;&nbsp;</span> </Link>
-
+          <Link style={style} to="/register">
+            {" "}
+            <span className="btn mr3">Register</span>{" "}
+          </Link>
+          <Link style={style} to="/register">
+            {" "}
+            <span className="btn">Login</span>{" "}
+          </Link>
         </div>
       </div>
       <div className="section">
