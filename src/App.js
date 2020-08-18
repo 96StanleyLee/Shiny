@@ -6,8 +6,11 @@ import HomePage from "./Containers/Home";
 import Register from "./Containers/Register";
 import PageNotFound from "./Containers/404";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Axios from "axios";
 
 function App() {
+
+
   let [homepageCards] = useState([
     {
       image: "https://i.vimeocdn.com/portrait/9601072_300x300",
@@ -22,21 +25,30 @@ function App() {
     },
   ]);
 
+
+  const onClickRegister = (object) =>{
+    console.log(object)
+    Axios.post('https://shiny-backend.herokuapp.com/users',object)
+  }
+
   return (
     <div className="App">
       <Navbar />
       <Router>
         <Switch>
           <Route exact path="/">
-            <Register />
             <HomePage homecards={homepageCards} />
-            <Footer />
+          </Route>
+          <Route exact path = "/register">
+            <Register register={onClickRegister}/>
           </Route>
           <Route path="*">
             <PageNotFound />
           </Route>
         </Switch>
       </Router>
+      <Footer />
+
     </div>
   );
 }

@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
-const Register = () => {
+const Register = ({ register }) => {
+  let [firstName, setFirstName] = useState("");
+  let [lastName, setLastName] = useState("");
+  let [email, setEmail] = useState("");
+  let [password, setPassword] = useState("");
+  let [passwordRepeat, setPasswordRepeat] = useState("");
+
   return (
     <div className="section register">
       <div className="container">
@@ -16,9 +23,11 @@ const Register = () => {
           placeholder="Enter Email"
           name="email"
           id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
-        />{" "}
-        <br />
+        />
+        <br></br>
         <label for="psw">
           <b>Password</b>
         </label>
@@ -27,11 +36,13 @@ const Register = () => {
           className="mb2"
           type="password"
           placeholder="Enter Password"
-          name="psw"
+          name="password"
           id="psw"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           required
-        />{" "}
-        <br />
+        />
+        <br></br>
         <label for="psw-repeat">
           <b>Repeat Password</b>
         </label>
@@ -40,16 +51,24 @@ const Register = () => {
           className="mb2"
           type="password"
           placeholder="Repeat Password"
-          name="psw-repeat"
+          name="passwordRepeat"
           id="psw-repeat"
+          value={passwordRepeat}
+          onChange={(e) => setPasswordRepeat(e.target.value)}
           required
-        />{" "}
-        <br />
+        />
+        <br></br>
         <p>
           By creating an account you agree to our{" "}
           <a href="#">Terms &amp; Privacy</a>.
         </p>
-        <button type="submit" class="registerbtn">
+        <button
+          type="submit"
+          class="registerbtn"
+          onClick={() =>
+            register({ firstName, lastName, email, password, passwordRepeat })
+          }
+        >
           Register
         </button>
       </div>
