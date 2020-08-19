@@ -252,6 +252,7 @@ a {
   color: white;
   padding: 16px 40px;
   border-radius: 40px;
+  font-weight: bold;
   cursor: pointer;
 }
 
