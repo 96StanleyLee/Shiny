@@ -31,6 +31,12 @@ function App() {
     Axios.post('https://shiny-backend.herokuapp.com/users',object)
   }
 
+
+  const onClickLogin = (object) =>{
+    let user = Axios.post('https://shiny-backend.herokuapp.com/login',object,{withCredentials: true})
+    console.log(user)
+  }
+
   return (
     <div className="App">
       <Router>
@@ -43,7 +49,7 @@ function App() {
             <Register register={onClickRegister}/>
           </Route> */}
           <Route path="/register" render={(routeProps) => <SignIn {...routeProps} register={onClickRegister}/>} />
-          <Route path="/login" render={(routeProps) => <SignIn {...routeProps} />} />
+          <Route path="/login" render={(routeProps) => <SignIn {...routeProps} login={onClickLogin} />} />
 
           <Route path="*">
             <PageNotFound />

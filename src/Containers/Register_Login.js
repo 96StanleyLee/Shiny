@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Register = (props,{ register }) => {
+const Register = (props) => {
   let [firstName, setFirstName] = useState("");
   let [lastName, setLastName] = useState("");
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let [passwordRepeat, setPasswordRepeat] = useState("");
 
-  console.log(props)
+  let {login, register} = props
+
+
   return (
     <div className="section register">
       <div className="container">
@@ -72,15 +74,28 @@ const Register = (props,{ register }) => {
           By creating an account you agree to our{" "}
           <a href="#">Terms &amp; Privacy</a>.
         </p>
+
+        {props.match.path === '/register'?
         <button
+        type="submit"
+        className="registerbtn"
+        onClick={() =>
+          register({ firstName, lastName, email, password, passwordRepeat })
+        }
+      >
+        Register
+      </button>
+      :
+      <button
           type="submit"
           className="registerbtn"
           onClick={() =>
-            register({ firstName, lastName, email, password, passwordRepeat })
+            login()
           }
         >
-          Register
-        </button>
+          Login
+        </button>}
+        
       </div>
 
       <div className="container signin">
