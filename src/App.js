@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Containers/Navbar.js";
 import Footer from "./Containers/Footer.js";
 import "./App.css";
@@ -28,13 +28,35 @@ function App() {
 
   const onClickRegister = (object) =>{
     console.log(object)
-    Axios.post('https://shiny-backend.herokuapp.com/users',object)
+    Axios.post('http://localhost:4000/users',object)
+    // https://shiny-backend.herokuapp.com/users
   }
+
+  
+  useEffect(()=>{
+    fetch("http://localhost:4000/autologin", {
+    credentials: "include"
+  })
+    .then(r => r.json())
+    .then(r=> console.log(r))
+  },[])
 
 
   const onClickLogin = (object) =>{
-    let user = Axios.post('https://shiny-backend.herokuapp.com/login',object,{withCredentials: true})
-    console.log(user)
+    // Axios.post('http://localhost:4000/login',object, {withCredentials: true})
+    // .then(resp => console.log(resp.data))
+    fetch("http://localhost:4000/login", {
+      method: "POST",
+      credentials: 'include',
+      headers: {
+        "Content-Type": "application/json"
+      },      
+      body: JSON.stringify(object)
+    })
+    .then(r => r.json())
+    .then(r => console.log(r))
+    
+    // https://shiny-backend.herokuapp.com/login
   }
 
   return (

@@ -90,7 +90,7 @@ const Register = (props) => {
           type="submit"
           className="registerbtn"
           onClick={() =>
-            login()
+            login({email, password, passwordRepeat})
           }
         >
           Login
