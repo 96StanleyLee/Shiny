@@ -18,6 +18,11 @@ const Register = (props) => {
     }
   }
 
+  const registration = () =>{
+    register({ firstName, lastName, email, password, passwordRepeat })
+    props.history.push('/login')
+  }
+
   useEffect(()=>{
     redirection()
   },[props.user])
@@ -95,7 +100,7 @@ const Register = (props) => {
         type="submit"
         className="registerbtn"
         onClick={() =>
-          register({ firstName, lastName, email, password, passwordRepeat })
+          registration()
         }
       >
         Register

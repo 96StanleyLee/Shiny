@@ -5,7 +5,7 @@ import "./App.css";
 import HomePage from "./Containers/Home";
 import SignIn from "./Containers/Register_Login";
 import PageNotFound from "./Containers/404";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Axios from "axios";
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
   const onClickRegister = (object) =>{
     console.log(object)
     Axios.post('https://shiny-backend.herokuapp.com/users',object)
+    return <Redirect to='/login' />
     // https://shiny-backend.herokuapp.com/users
   }
 
