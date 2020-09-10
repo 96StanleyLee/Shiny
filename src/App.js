@@ -25,27 +25,29 @@ function App() {
     },
   ]);
 
+  let [user, setUser] = useState({})
 
   const onClickRegister = (object) =>{
     console.log(object)
-    Axios.post('http://localhost:4000/users',object)
+    Axios.post('https://shiny-backend.herokuapp.com/users',object)
     // https://shiny-backend.herokuapp.com/users
   }
 
   
   useEffect(()=>{
-    fetch("http://localhost:4000/autologin", {
+    fetch("https://shiny-backend.herokuapp.com/autologin", {
     credentials: "include"
   })
     .then(r => r.json())
-    .then(r=> console.log(r))
+    .then(r=> setUser(r))
   },[])
 
 
   const onClickLogin = (object) =>{
     // Axios.post('http://localhost:4000/login',object, {withCredentials: true})
     // .then(resp => console.log(resp.data))
-    fetch("http://localhost:4000/login", {
+    console.log(object)
+    fetch("https://shiny-backend.herokuapp.com/login", {
       method: "POST",
       credentials: 'include',
       headers: {
@@ -65,13 +67,13 @@ function App() {
       <Navbar />
         <Switch>
           <Route exact path="/">
-            <HomePage homecards={homepageCards} />
+            <HomePage homecards={homepageCards} user={user} />
           </Route>
           {/* <Route exact path = "/register">
             <Register register={onClickRegister}/>
           </Route> */}
-          <Route path="/register" render={(routeProps) => <SignIn {...routeProps} register={onClickRegister}/>} />
-          <Route path="/login" render={(routeProps) => <SignIn {...routeProps} login={onClickLogin} />} />
+          <Route path="/register" render={(routeProps) => <SignIn {...routeProps} register={onClickRegister} user={user}/>} />
+          <Route path="/login" render={(routeProps) => <SignIn {...routeProps} login={onClickLogin} user={user}/>} />
 
           <Route path="*">
             <PageNotFound />

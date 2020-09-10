@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Redirect } from 'react-router-dom'
 
 const Register = (props) => {
   let [firstName, setFirstName] = useState("");
@@ -7,12 +8,26 @@ const Register = (props) => {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let [passwordRepeat, setPasswordRepeat] = useState("");
+  let [redirect, setRedirect] = useState(false)
 
   let {login, register} = props
 
+  const redirection = () =>{
+    if(Object.keys(props.user).length > 1){
+      setRedirect(true)
+    }
+  }
+
+  useEffect(()=>{
+    redirection()
+  },[props.user])
+
+
 
   return (
+    
     <div className="section register">
+      {redirect? <Redirect to='/' />: null}
       <div className="container">
         {props.match.path === '/register'? 
         <>

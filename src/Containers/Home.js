@@ -3,11 +3,13 @@ import ShinyCard from "../Components/ShinyCard.js";
 import LinesBG from "./Lines.svg";
 import { Link } from "react-router-dom";
 
-const HomePage = ({ homecards }) => {
+const HomePage = ({ homecards, user }) => {
+
   return (
     <div className="homepage">
       <div className="section Intro">
         <div className="container">
+          {user? <h1>{user.email}</h1>: null}
           <h1>A network built to help ideas glow up</h1>
           <p className="intro_subtitle mb4">
             Shiny
