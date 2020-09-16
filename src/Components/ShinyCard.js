@@ -1,8 +1,9 @@
 import React from "react";
 import ViewIcon from "../img/Icon_View.svg";
 import GotoIcon from "../img/Icon_Goto.svg";
-import WatchIcon from "../img/Icon_Watch.svg";
+import FavoriteIcon from "../img/Icon_Favorite.svg";
 import CategoryNetwork from "../img/Category_Network.svg";
+import "./ShinyCard.css";
 
 const ShinyCard = (props) => {
   let { image, lead } = props.data;
@@ -31,12 +32,12 @@ const ShinyCard = (props) => {
           </span>
           <span className="card-view-btn mx1">
             <img
-              src={WatchIcon}
+              src={FavoriteIcon}
               alt="View"
               width="40"
               className="card-view-btn-icon"
             />
-            <p className="card-view-btn-text">Watch</p>
+            <p className="card-view-btn-text">Favorite</p>
           </span>
         </div>
         <div className="card_row_title">

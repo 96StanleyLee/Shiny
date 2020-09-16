@@ -1,0 +1,114 @@
+.card {
+  overflow: hidden;
+  padding: 2rem;
+  position: relative;
+  transition: background 0.2s ease;
+  border-right: solid 1px #eee;
+}
+
+.card:hover > .card-overlay {
+  top: 0;
+}
+
+.card-overlay:hover > .card-view-btn {
+  margin-top: 0;
+}
+
+.card-view-btn {
+  padding: 0;
+  background: white;
+  width: 8rem;
+  height: 8rem;
+  cursor: pointer;
+  border-radius: 50rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.card-view-btn p {
+  margin: 12px 0px 0px 0px !important;
+}
+
+.card-view-btn-text {
+  display: absolute;
+  opacity: 0;
+  margin-top: -2rem;
+  transition: 0.2s;
+}
+
+.card-view-btn:hover > .card-view-btn-text {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.card-view-btn-icon {
+  margin-top: 32px;
+  transition: 0.2s ease;
+}
+
+.card-view-btn:hover > .card-view-btn-icon {
+  margin-top: 0;
+}
+
+.card-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  background: rgba(73, 9, 255, 0.9);
+}
+
+.card_row_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.card_row_team {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 32px;
+  align-items: start;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}
+
+.card_row_team p {
+  opacity: 0.7;
+}
+
+.card_team_leader {
+  grid-column-start: 1;
+}
+
+.card_team_panel {
+  grid-column-start: 2;
+}
+
+.profile-circle {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.profile-image {
+  width: 4rem;
+  height: 4rem;
+}
