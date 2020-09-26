@@ -32,14 +32,12 @@ a {
 .Side {
   grid-area: Side;
   border-right: solid 1px #eee;
-  height: 100%;
   padding: 2rem;
 }
 
 .Side-p0 {
   grid-area: Side;
   border-right: solid 1px #eee;
-  height: 100%;
   padding: 0;
 }
 
@@ -57,11 +55,6 @@ a {
 
 .intro_subtitle {
   line-height: 150%;
-}
-
-.footer {
-  border-top: solid 1px rgba(244, 255, 244, 0.115);
-  padding: 160px 0px;
 }
 
 .btn {
@@ -110,6 +103,11 @@ a {
   left: 0;
   top: 0px;
   transition: all 0.3s ease;
+}
+
+.homepage {
+  margin-bottom: 150px;
+  background: white;
 }
 
 .homepage-bg {
@@ -169,4 +167,31 @@ a {
   justify-content: center;
   display: flex;
   align-items: center;
+}
+
+.category-btn {
+  display: block;
+  padding: 8px 0px;
+  margin: 8px 0px;
+  background: #eee;
+  cursor: pointer;
+}
+
+.category-btn:hover {
+  background: black;
+  color: white;
+}
+
+.footer {
+  height: 150px;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  background: black;
+  color: white;
+  border-color: #292929 !important;
+}
+
+.footer.Side {
+  border-right: solid 1px #292929;
 }
