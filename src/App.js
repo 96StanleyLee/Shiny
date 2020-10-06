@@ -5,13 +5,16 @@ import "./App.css";
 import HomePage from "./Containers/Home";
 import SignIn from "./Containers/Register_Login";
 import PageNotFound from "./Containers/404";
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import Axios from "axios";
 
 function App() {
-
-
-  let [homepageCards] = useState([
+  let [homepageCards, setHomePageCards] = useState([
     {
       image: "https://i.vimeocdn.com/portrait/9601072_300x300",
       lead: "Rock Vincent Guitard",
@@ -25,56 +28,61 @@ function App() {
     },
   ]);
 
-  let [user, setUser] = useState({})
+  let [user, setUser] = useState({});
 
-  const onClickRegister = (object) =>{
-    console.log(object)
-    Axios.post('https://shiny-backend.herokuapp.com/users',object)
-    return <Redirect to='/login' />
+  const onClickRegister = (object) => {
+    console.log(object);
+    Axios.post("https://shiny-backend.herokuapp.com/users", object);
+    return <Redirect to="/login" />;
     // https://shiny-backend.herokuapp.com/users
-  }
+  };
 
-  
-  useEffect(()=>{
+  useEffect(() => {
     fetch("https://shiny-backend.herokuapp.com/autologin", {
-    credentials: "include"
-  })
-    .then(r => r.json())
-    .then(r=> setUser(r))
-  },[])
+      credentials: "include",
+    })
+      .then((r) => r.json())
+      .then((r) => setUser(r));
+  }, []);
 
-
-  const onClickLogin = (object) =>{
+  const onClickLogin = (object) => {
     // Axios.post('http://localhost:4000/login',object, {withCredentials: true})
     // .then(resp => console.log(resp.data))
-    console.log(object)
+    console.log(object);
     fetch("https://shiny-backend.herokuapp.com/login", {
       method: "POST",
-      credentials: 'include',
+      credentials: "include",
       headers: {
-        "Content-Type": "application/json"
-      },      
-      body: JSON.stringify(object)
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(object),
     })
-    .then(r => r.json())
-    .then(r => console.log(r))
-    
+      .then((r) => r.json())
+      .then((r) => setUser(r));
+
     // https://shiny-backend.herokuapp.com/login
-  }
+  };
 
   return (
     <div className="App">
       <Router>
-      <Navbar />
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <HomePage homecards={homepageCards} user={user} />
           </Route>
-          {/* <Route exact path = "/register">
-            <Register register={onClickRegister}/>
-          </Route> */}
-          <Route path="/register" render={(routeProps) => <SignIn {...routeProps} register={onClickRegister} user={user}/>} />
-          <Route path="/login" render={(routeProps) => <SignIn {...routeProps} login={onClickLogin} user={user}/>} />
+          <Route
+            path="/register"
+            render={(routeProps) => (
+              <SignIn {...routeProps} register={onClickRegister} user={user} />
+            )}
+          />
+          <Route
+            path="/login"
+            render={(routeProps) => (
+              <SignIn {...routeProps} login={onClickLogin} user={user} />
+            )}
+          />
 
           <Route path="*">
             <PageNotFound />
@@ -82,7 +90,6 @@ function App() {
         </Switch>
       </Router>
       <Footer />
-
     </div>
   );
 }
