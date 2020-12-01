@@ -1,6 +1,6 @@
 # Welcome to Shiny
 
-Shiny is an idea that's currently being brought to life by Rock Vincent Guitard and Stanley Lee.
+Shiny is an idea that's currently being brought to life by Rock Vincent Guitard and Stanley Lee.![Shiny](https://i.imgur.com/Chvjhgm.png)
 It's a web-app built in React using a Ruby on Rails Backend with the vision of connecting ideas with the right team!
 
 WIP DEMO LINK: [Click Here](https://shiny-collab.netlify.app/)
@@ -30,3 +30,4 @@ The current features added are :
 - Auth through Rails (Might move to OAuth)
 - Homepage 
 - Multiple component designs ( Idea cards, page templates, modal designs)
+
