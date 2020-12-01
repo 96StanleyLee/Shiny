@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to Shiny
 
-## Available Scripts
+Shiny is an idea that's currently being brought to life by Rock Vincent Guitard and Stanley Lee.
+It's a web-app built in React using a Ruby on Rails Backend with the vision of connecting ideas with the right team!
 
-In the project directory, you can run:
+WIP DEMO LINK: [Click Here](https://shiny-collab.netlify.app/)
 
-### `npm start`
+# Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Shiny was created with a vision of creating a community where ideas can come alive. 
 
-### `npm test`
+ - Users can submit ideas along with a description and several tags. 
+ - Users can search up ideas through categories or tags. 
+ - Users can volunteer to join a team of collaboraters based on idea needs (ie. Graphic Designer, Web Developer, Social Media Influencer)
+ 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## WIP
+Currently Shiny is on hiatus. It was intended to be a side project for both Rock and I, but due to work place responsibilities it was put on hold.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Currently the features to be added :
+- Idea Creation 
+- Idea lookup through name
+- Idea lookup through category
+- Idea lookup through tags
+- Collaboration page 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The current features added are :
+- Auth through Rails (Might move to OAuth)
+- Homepage 
+- Multiple component designs ( Idea cards, page templates, modal designs)
